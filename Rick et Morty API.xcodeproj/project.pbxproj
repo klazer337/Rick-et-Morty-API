@@ -12,6 +12,7 @@
 		93409B23217CD8B70082FA03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93409B21217CD8B70082FA03 /* Main.storyboard */; };
 		93409B25217CD8B80082FA03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93409B24217CD8B80082FA03 /* Assets.xcassets */; };
 		93409B28217CD8B80082FA03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93409B26217CD8B80082FA03 /* LaunchScreen.storyboard */; };
+		93409B31217CDA9F0082FA03 /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93409B30217CDA9F0082FA03 /* NavController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		93409B24217CD8B80082FA03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93409B27217CD8B80082FA03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93409B29217CD8B80082FA03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93409B30217CDA9F0082FA03 /* NavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		93409B1C217CD8B70082FA03 /* Rick et Morty API */ = {
 			isa = PBXGroup;
 			children = (
+				93409B2F217CDA720082FA03 /* Controller */,
 				93409B1D217CD8B70082FA03 /* AppDelegate.swift */,
 				93409B1F217CD8B70082FA03 /* CharactersController.swift */,
 				93409B21217CD8B70082FA03 /* Main.storyboard */,
@@ -62,6 +65,14 @@
 				93409B29217CD8B80082FA03 /* Info.plist */,
 			);
 			path = "Rick et Morty API";
+			sourceTree = "<group>";
+		};
+		93409B2F217CDA720082FA03 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				93409B30217CDA9F0082FA03 /* NavController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +148,7 @@
 			files = (
 				93409B20217CD8B70082FA03 /* CharactersController.swift in Sources */,
 				93409B1E217CD8B70082FA03 /* AppDelegate.swift in Sources */,
+				93409B31217CDA9F0082FA03 /* NavController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

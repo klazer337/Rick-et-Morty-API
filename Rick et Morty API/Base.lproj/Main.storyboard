@@ -74,10 +74,10 @@
             </objects>
             <point key="canvasLocation" x="1878" y="-564"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Nav Controller-->
         <scene sceneID="ve3-cl-Mzv">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BxY-fB-Ypc" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BxY-fB-Ypc" customClass="NavController" customModule="Rick_et_Morty_API" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="D9U-mS-JNq">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
