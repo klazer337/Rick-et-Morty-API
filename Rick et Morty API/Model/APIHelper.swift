@@ -26,8 +26,21 @@ class APIHelper {
                 if error != nil {
                     print(error!.localizedDescription)
                 }
+                
                 if data != nil {
                     // Convertir le JSON
+                    do {
+                        let reponseJSON = try JSONDecoder().decode(APIResult.self, from: data!)         // Décoder le JSON
+                        for perso in reponseJSON.results {
+                            print(perso.name)
+                            print(perso.gender)
+                        }
+
+                    } catch {
+                        print(error.localizedDescription)
+                    }
+                } else {                                                                                // data = nil
+                    print("Aucune data dispo")
                 }
             }.resume()                      // Arrêter la tâche (obligatoire)
         } else {                            // si URL -> NOK
