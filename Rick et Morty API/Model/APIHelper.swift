@@ -8,6 +8,9 @@
 
 import Foundation
 
+// Le résultat sera optionel et asynchrone
+typealias ApiCompletion = (_ next: String?, _ personnages: [Personnage]?, _ errorString: String?) -> Void
+
 class APIHelper {
     // URL de la base
     private let _baseUrl = "https://rickandmortyapi.com/api/"
@@ -18,33 +21,32 @@ class APIHelper {
     }
     
     
-    func getPersos(string: String) {
+    func getPersos(string: String, completion: ApiCompletion?) {
         // Véririfer si l'URL est bonne
         if let url = URL(string: string) {
             // Lancement une session URL
             URLSession.shared.dataTask(with: url) { (data, response, error) in
                 if error != nil {
-                    print(error!.localizedDescription)
+                    completion?(nil, nil, error!.localizedDescription)
                 }
                 
                 if data != nil {
                     // Convertir le JSON
                     do {
                         let reponseJSON = try JSONDecoder().decode(APIResult.self, from: data!)         // Décoder le JSON
-                        for perso in reponseJSON.results {
-                            print(perso.name)
-                            print(perso.gender)
-                        }
-
+                        completion?(reponseJSON.info.next, reponseJSON.results, nil)
                     } catch {
-                        print(error.localizedDescription)
+                        // Problème lors du décodage
+                        completion?(nil, nil,error.localizedDescription)
                     }
-                } else {                                                                                // data = nil
-                    print("Aucune data dispo")
+                } else {
+                    // Pas de data dispo
+                    completion?(nil, nil, "Aucune data dispo")
                 }
             }.resume()                      // Arrêter la tâche (obligatoire)
-        } else {                            // si URL -> NOK
-            print("URL invalide")
+        } else {
+            // Pas d'URL
+            completion?(nil, nil, "URL invalide")
         }
     }
 }
