@@ -20,6 +20,15 @@ class APIHelper {
         return _baseUrl + "character/"
     }
     
+    func urlAvecParam() -> String {
+        var base = urlPersonnages + "?"
+        if UserDefaultHelper().getName() != "" {
+            base += "name=" + UserDefaultHelper().getName() + "&"
+        }
+        let st = UserDefaultHelper().getStatus() ? "alive" : "dead"
+        base += "status=" + st
+        return base
+    }
     
     func getPersos(string: String, completion: ApiCompletion?) {
         // Véririfer si l'URL est bonne

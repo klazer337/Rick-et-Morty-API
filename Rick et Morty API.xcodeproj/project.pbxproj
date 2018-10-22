@@ -15,6 +15,12 @@
 		93409B31217CDA9F0082FA03 /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93409B30217CDA9F0082FA03 /* NavController.swift */; };
 		93409B34217CDC910082FA03 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93409B33217CDC910082FA03 /* APIHelper.swift */; };
 		93409B36217CE06C0082FA03 /* APIResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93409B35217CE06C0082FA03 /* APIResult.swift */; };
+		93409B39217CECD40082FA03 /* PersoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93409B38217CECD40082FA03 /* PersoCell.swift */; };
+		93409B3B217CEDF70082FA03 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93409B3A217CEDF70082FA03 /* Extensions.swift */; };
+		93409B3D217E45310082FA03 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93409B3C217E45310082FA03 /* DetailView.swift */; };
+		93409B3F217E454F0082FA03 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93409B3E217E454F0082FA03 /* DetailView.xib */; };
+		93409B41217E56E40082FA03 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93409B40217E56E40082FA03 /* SettingsController.swift */; };
+		93409B43217E58900082FA03 /* UserDefaultHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93409B42217E58900082FA03 /* UserDefaultHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +34,12 @@
 		93409B30217CDA9F0082FA03 /* NavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
 		93409B33217CDC910082FA03 /* APIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
 		93409B35217CE06C0082FA03 /* APIResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResult.swift; sourceTree = "<group>"; };
+		93409B38217CECD40082FA03 /* PersoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersoCell.swift; sourceTree = "<group>"; };
+		93409B3A217CEDF70082FA03 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		93409B3C217E45310082FA03 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		93409B3E217E454F0082FA03 /* DetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
+		93409B40217E56E40082FA03 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		93409B42217E58900082FA03 /* UserDefaultHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				93409B32217CDC780082FA03 /* Model */,
+				93409B37217CEC940082FA03 /* View */,
 				93409B2F217CDA720082FA03 /* Controller */,
 				93409B1D217CD8B70082FA03 /* AppDelegate.swift */,
 				93409B21217CD8B70082FA03 /* Main.storyboard */,
@@ -76,6 +89,7 @@
 			children = (
 				93409B1F217CD8B70082FA03 /* CharactersController.swift */,
 				93409B30217CDA9F0082FA03 /* NavController.swift */,
+				93409B40217E56E40082FA03 /* SettingsController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -85,8 +99,20 @@
 			children = (
 				93409B33217CDC910082FA03 /* APIHelper.swift */,
 				93409B35217CE06C0082FA03 /* APIResult.swift */,
+				93409B3A217CEDF70082FA03 /* Extensions.swift */,
+				93409B42217E58900082FA03 /* UserDefaultHelper.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		93409B37217CEC940082FA03 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				93409B38217CECD40082FA03 /* PersoCell.swift */,
+				93409B3C217E45310082FA03 /* DetailView.swift */,
+				93409B3E217E454F0082FA03 /* DetailView.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93409B28217CD8B80082FA03 /* LaunchScreen.storyboard in Resources */,
+				93409B3F217E454F0082FA03 /* DetailView.xib in Resources */,
 				93409B25217CD8B80082FA03 /* Assets.xcassets in Resources */,
 				93409B23217CD8B70082FA03 /* Main.storyboard in Resources */,
 			);
@@ -160,11 +187,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93409B41217E56E40082FA03 /* SettingsController.swift in Sources */,
 				93409B34217CDC910082FA03 /* APIHelper.swift in Sources */,
+				93409B3D217E45310082FA03 /* DetailView.swift in Sources */,
 				93409B36217CE06C0082FA03 /* APIResult.swift in Sources */,
 				93409B20217CD8B70082FA03 /* CharactersController.swift in Sources */,
 				93409B1E217CD8B70082FA03 /* AppDelegate.swift in Sources */,
+				93409B43217E58900082FA03 /* UserDefaultHelper.swift in Sources */,
 				93409B31217CDA9F0082FA03 /* NavController.swift in Sources */,
+				93409B39217CECD40082FA03 /* PersoCell.swift in Sources */,
+				93409B3B217CEDF70082FA03 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
